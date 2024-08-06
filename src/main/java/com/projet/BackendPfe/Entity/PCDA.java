@@ -1,5 +1,6 @@
 package com.projet.BackendPfe.Entity;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -23,26 +24,30 @@ public class PCDA {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	
+	@NotNull
 	@JsonProperty("Designation")
 	private String Designation;
 	
-
+	@NotNull
 	@JsonProperty("Titre")
 	private String Titre;
 
+ @NotNull(message = "Sujet_de_publication ne peut pas être nul")
 	@JsonProperty("Sujet_de_publication")
 	private String Sujet_de_publication;
 
+	@NotNull
 	@JsonProperty("Processus")
 	private String Processus;
 
+	@NotNull
 	@JsonProperty("Priorite")
 	private long Priorite;
-	
+	@NotNull
 	@JsonProperty("Action")
 	private String Action;
 	
-
+	@NotNull
 	@JsonProperty("O_N")
 	private String O_N;
 
@@ -50,19 +55,19 @@ public class PCDA {
 	@JsonProperty("Delaideaction")
 	private String Delaideaction;
 	
-	
+	@NotNull
 	@JsonProperty("Responsable")
 	private String Responsable;
 	
-	
+	@NotNull
 	@JsonProperty("Delai")
 	private String Delai;
 
-	
+	@NotNull
 	@JsonProperty("Statut")
 	private String Statut;
 	
-
+	@NotNull
 	@JsonProperty("Commentaire")
 	private String Commentaire;
 	
@@ -165,6 +170,13 @@ public class PCDA {
 	}
 	public void setCommentaire(String commentaire) {
 		Commentaire = commentaire;
+	}
+	@Override
+	public String toString() {
+		return "PCDA [id=" + id + ", Designation=" + Designation + ", Titre=" + Titre + ", Sujet_de_publication="
+				+ Sujet_de_publication + ", Processus=" + Processus + ", Priorite=" + Priorite + ", Action=" + Action
+				+ ", O_N=" + O_N + ", Delaideaction=" + Delaideaction + ", Responsable=" + Responsable + ", Delai="
+				+ Delai + ", Statut=" + Statut + ", Commentaire=" + Commentaire + "]";
 	}
 	
 	

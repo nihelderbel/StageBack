@@ -27,7 +27,8 @@ public class PCDAController {
 	
 @PostMapping("/addPcda")
 public PCDA create(@RequestBody PCDA pcda) {
-	return service.ajouterDossier(pcda);
+	//System.out.println(pcda);
+	return service.ajouterPDCA(pcda);
 }
 @GetMapping("/all")
 public List<PCDA> get(){
@@ -35,6 +36,7 @@ public List<PCDA> get(){
 }
 @PutMapping("/update/{id}")
 public PCDA update(@PathVariable int id ,@RequestBody PCDA pcda){
+	System.out.println(pcda);
     return service.modifierPCDA(id,pcda);
 }
 @DeleteMapping("{id}")

@@ -7,7 +7,7 @@ import com.projet.BackendPfe.Entity.PCDA;
 
 
 public interface IPCDA {
-	 PCDA ajouterDossier(PCDA pcda);
+	 PCDA ajouterPDCA(PCDA pcda);
      List<PCDA> getAll();
      PCDA modifierPCDA(long id ,PCDA pcda);
      String SupprimerPCDA(long id);

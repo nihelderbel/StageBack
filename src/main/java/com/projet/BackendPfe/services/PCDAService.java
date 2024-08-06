@@ -12,7 +12,7 @@ public class PCDAService implements IPCDA{
 	@Autowired PCDArepository repository;
 
 	@Override
-	public PCDA ajouterDossier(PCDA pcda) {
+	public PCDA ajouterPDCA(PCDA pcda) {
 		// TODO Auto-generated method stub
 		return repository.save(pcda);
 	}
