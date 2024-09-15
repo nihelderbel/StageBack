@@ -84,6 +84,13 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 			.antMatchers("/PCDA/{id}").permitAll()
 			.antMatchers("/PCDA/get/{id}").permitAll()
 			
+			/*******************  Audit ***************************/
+			.antMatchers("/Audit/addAudit").permitAll()
+			.antMatchers("/Audit/all").permitAll()
+			.antMatchers("/Audit/update/{id}").permitAll()
+			.antMatchers("/Audit/{id}").permitAll()
+			.antMatchers("/Audit/get/{id}").permitAll()
+			
 			
 			/************* UserBMW ***********************/
 			.antMatchers("/userBMw/login").permitAll()
