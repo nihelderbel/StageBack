@@ -23,7 +23,7 @@ public class AuditController {
 	@Autowired AuditService service;
 	@PostMapping("/addAudit")
 	public Audit create(@RequestBody Audit audit) {
-		
+		System.out.println(audit);
 		return service.ajouterAudit(audit);
 	}
 	@GetMapping("/all")

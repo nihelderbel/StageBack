@@ -36,8 +36,8 @@ public class Audit {
 	@JsonProperty("contenu")
 	private String contenu;
 	
-	@NotNull
-	@JsonProperty("etatdeInstruction")
+
+	@JsonProperty("etatdeinstruction")
 	private String etatdeinstruction;
 	
 	@NotNull
